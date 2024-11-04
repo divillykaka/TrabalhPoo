@@ -12,4 +12,3 @@ public Aluno(String nome, String cpf, int idade, int matricula){
 
 }
 
-bmo
