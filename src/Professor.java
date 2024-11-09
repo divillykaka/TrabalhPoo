@@ -1,13 +1,12 @@
 public class Professor extends Pessoa{
-    //Privacidade do atributo
-    String centro;
+    private final String centro;
 
-    public Professor(String nome, String cpf, int idade){
+    public Professor(String nome, String cpf, int idade, String centro){
         super(nome, cpf, idade);
-        //Inicializar o atributo centro
+        this.centro = centro;
     }
     
-    void darAula() {
-        System.out.println("Dar aula");
+    public void darAula() {
+        System.out.println("O professor " + super.getNome() + "vai esta dando aula");
     }
 }

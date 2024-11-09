@@ -1,8 +1,7 @@
 public class Pessoa {
-    //Colocar a privacidade dos atributos
-    String nome;
-    String cpf;
-    int idade;
+    private String nome;
+    private String cpf;
+    private int idade;
 
     public Pessoa(String nome, String cpf, int idade){
        this.nome = nome;
@@ -10,26 +9,17 @@ public class Pessoa {
        this.idade = idade;
     }
 
-    //Criar os getters e setters para cada atributo
-    
-    //Como não pede um método para exibir dados é melhor não colocar
-    public void exibirdados() {
-        System.out.println("NOME:" + nome + "\nCPF:" + cpf + "\nIDADE:" + idade + "\n");
+    public void fazerAniversario() {
+        setIdade(idade + 1);
+        System.out.println("Parabéns pelos seus " + idade + " anos" );
     }
 
-    //Modificar usando o setter
-    //O método fazerAniversario() é para ser público
-    void fazerAniversario() {
-        int niver = idade + 1;
-        System.out.println("Parabéns pelos seus " + niver + " anos" );
-    }
+    public int getIdade() { return idade; }
+    public void setIdade(int idade) { this.idade = idade; }
 
-    //O método de pagar mensalidade fica na classe Aluno, então melhor remover
-    void mensalidade(){
-        System.out.println("Pagar a Mensalidade");
-    }
+    public String getCpf() { return cpf; }
+    public void setIdade(String cpf) { this.cpf = cpf; }
 
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
 }
-
-
-
