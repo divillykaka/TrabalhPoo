@@ -6,11 +6,11 @@ public class Turma {
     private final int codigo;
     ArrayList<Aluno> alunos;
 
-    public Turma(Professor professor, Disciplina disciplina, int codigo, ArrayList<Aluno> alunos) {
+    public Turma(Professor professor, Disciplina disciplina, int codigo) {
         this.professor = professor;
         this.disciplina = disciplina;
         this.codigo = codigo;
-        this.alunos = alunos;
+        alunos = new ArrayList<>();
     }
 
     public void adicionarAluno(Aluno aluno) { alunos.add(aluno); }
@@ -26,5 +26,6 @@ public class Turma {
     public void listarInformacoes(){
         System.out.println("Professor: " + professor.getNome() + "\nDisciplina: "+ disciplina.nome + "\nCodigo: " + codigo + "\n");
         System.out.println("============================================= \n");
+
     }
 }
